@@ -14,7 +14,7 @@ public class MemberDao {
 	private static MemberDao dao = null;
 	
 	private MemberDao() {
-		DBConnection.initConnection();  // 이 글을 적어줌으로써 db자료와 연동되어 id중복 유무를 확인할수있다.
+		DBConnection.initConnection();  // 이 글을 적어줌으로써 db자료와 연동되어 id중복 유무를 확인할수있다. // 여기서 해줬기때문에 BbsDao에는 기입하지 않아도 된다.
 	}
 	
 	public static MemberDao getInstance() {
