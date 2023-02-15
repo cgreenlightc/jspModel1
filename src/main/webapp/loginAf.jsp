@@ -15,12 +15,12 @@
 	if(mem != null) {		// null이 아니라는거는 id,pwd가 매칭이 됐다는 의미
 		// 로그인 회원정보 session에 저장된다. 얻는 방법은 2가지
 		// request.getSession().setAttribute("login", mem);
-		session.setAttribute("login", mem);  // login한 정보(mem)를 저장을 해라는 의미
+		session.setAttribute("login", mem);  // login한 정보(mem)를 저장을 해라는 의미  // mem을 object로 저장한다.
 	//	session.setMaxInactiveInterval(60 *60 * 2); // session의 유효기간 (안해도된다.)
 		%>
 		<script type="text/javascript">
 		alert("환영합니다. <%=mem.getId() %>님");
-		// location.href = "";
+		location.href = "./bbslist.jsp";
 		</script>
 		<%
 	}else{
